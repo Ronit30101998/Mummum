@@ -60,7 +60,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 20px 15px;
 }
 
 .content-wrapper {
@@ -79,11 +79,39 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+@media (max-width: 1024px) {
+    .opening-message,
+    .main-content,
+    .closing-message {
+        padding: 50px 35px;
+        border-radius: 18px;
+    }
+}
+
 @media (max-width: 768px) {
     .opening-message,
     .main-content,
     .closing-message {
         padding: 40px 25px;
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .opening-message,
+    .main-content,
+    .closing-message {
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .opening-message,
+    .main-content,
+    .closing-message {
+        padding: 25px 16px;
+        border-radius: 12px;
     }
 }
 
@@ -95,6 +123,8 @@ body {
     text-align: center;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .message-text:nth-child(2) {
@@ -138,11 +168,33 @@ body {
     box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
     opacity: 0;
     animation: fadeInUp 1s ease forwards 4.5s;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .continue-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(255, 107, 157, 0.5);
+}
+
+.continue-btn:active {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .continue-btn {
+        padding: 14px 40px;
+        font-size: 1rem;
+        margin: 40px auto 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .continue-btn {
+        padding: 12px 35px;
+        font-size: 0.95rem;
+        margin: 30px auto 0;
+    }
 }
 
 .heart-container {
@@ -156,6 +208,20 @@ body {
     height: 80px;
     position: relative;
     animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .heart {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heart {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .heart::before,
@@ -193,10 +259,44 @@ body {
     margin-bottom: 50px;
     text-shadow: 0 0 20px rgba(255, 107, 157, 0.3);
     animation: fadeInUp 1s ease forwards;
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.75rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
 }
 
 .letter-section {
     margin: 40px 0;
+}
+
+@media (max-width: 600px) {
+    .letter-section {
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter-section {
+        margin: 20px 0;
+    }
 }
 
 .letter-card {
@@ -210,10 +310,56 @@ body {
     transform: translateY(30px);
 }
 
+@media (max-width: 768px) {
+    .letter-card {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .letter-card {
+        padding: 20px;
+        margin-bottom: 18px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter-card {
+        padding: 16px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border-left-width: 3px;
+    }
+}
+
 .letter-card p {
     font-size: 1.15rem;
     line-height: 1.8;
     color: #e8e8e8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .letter-card p {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .letter-card p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 }
 
 .slide-up {
@@ -238,6 +384,30 @@ body {
     margin: 0 auto 40px;
     position: relative;
     animation: heartbeat 1.5s ease-in-out infinite, fadeInUp 1s ease forwards;
+}
+
+@media (max-width: 768px) {
+    .final-heart {
+        width: 85px;
+        height: 85px;
+        margin: 0 auto 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .final-heart {
+        width: 75px;
+        height: 75px;
+        margin: 0 auto 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .final-heart {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto 25px;
+    }
 }
 
 .final-heart::before,
@@ -270,6 +440,8 @@ body {
     text-align: center;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .closing-text:nth-child(2) {
@@ -286,6 +458,44 @@ body {
     margin-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+    .closing-text {
+        font-size: 1.15rem;
+        margin-bottom: 30px;
+    }
+
+    .closing-text.final-words {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .closing-text {
+        font-size: 1.05rem;
+        margin-bottom: 25px;
+        line-height: 1.7;
+    }
+
+    .closing-text.final-words {
+        font-size: 1.1rem;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .closing-text {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .closing-text.final-words {
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+    }
+}
+
 .signature {
     text-align: center;
     font-size: 1.2rem;
@@ -294,6 +504,27 @@ body {
     margin-top: 60px;
     opacity: 0;
     animation: fadeInUp 1s ease forwards 2s;
+}
+
+@media (max-width: 768px) {
+    .signature {
+        font-size: 1.1rem;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .signature {
+        font-size: 1rem;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signature {
+        font-size: 0.95rem;
+        margin-top: 30px;
+    }
 }
 
 .hidden {
@@ -309,24 +540,32 @@ body {
     to { opacity: 1; }
 }
 
+@media (max-width: 1024px) {
+    .message-text {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+    }
+}
+
 @media (max-width: 768px) {
     .message-text {
         font-size: 1.1rem;
+        margin-bottom: 25px;
     }
+}
 
-    .title {
-        font-size: 2rem;
+@media (max-width: 600px) {
+    .message-text {
+        font-size: 1.05rem;
+        margin-bottom: 20px;
+        line-height: 1.7;
     }
+}
 
-    .letter-card p {
-        font-size: 1rem;
-    }
-
-    .closing-text {
-        font-size: 1.1rem;
-    }
-
-    .closing-text.final-words {
-        font-size: 1.2rem;
+@media (max-width: 480px) {
+    .message-text {
+        font-size: 0.95rem;
+        margin-bottom: 18px;
+        line-height: 1.6;
     }
 }
